@@ -152,6 +152,7 @@ wp-content/shield/
 /wp-content/plugins/wpengine-snapshot/snapshots
 /wp-content/mysql.sql
 /.wpe-devkit
+/site-archive-*-live-*-*/
 
 # Large and binary files
 # NOTE:
@@ -347,6 +348,20 @@ mono_crash.*
 *Service*/[Ll]og/
 *Service*/[Ll]ogs/
 *Service*/bin/
+SharedLibraries/*/[Dd]ebug/
+SharedLibraries/*/[Dd]ebugPublic/
+SharedLibraries/*/[Rr]elease/
+SharedLibraries/*/[Rr]eleases/
+SharedLibraries/*/x64/
+SharedLibraries/*/x86/
+SharedLibraries/*/[Ww][Ii][Nn]32/
+SharedLibraries/*/[Aa][Rr][Mm]/
+SharedLibraries/*/[Aa][Rr][Mm]64/
+SharedLibraries/*/bld/
+SharedLibraries/*/[Oo]bj/
+SharedLibraries/*/[Ll]og/
+SharedLibraries/*/[Ll]ogs/
+SharedLibraries/*/bin/
 *Function*/[Dd]ebug/
 *Function*/[Dd]ebugPublic/
 *Function*/[Rr]elease/
@@ -375,6 +390,34 @@ mono_crash.*
 *.Models/[Ll]og/
 *.Models/[Ll]ogs/
 *.Models/bin/
+*.Library/[Dd]ebug/
+*.Library/[Dd]ebugPublic/
+*.Library/[Rr]elease/
+*.Library/[Rr]eleases/
+*.Library/x64/
+*.Library/x86/
+*.Library/[Ww][Ii][Nn]32/
+*.Library/[Aa][Rr][Mm]/
+*.Library/[Aa][Rr][Mm]64/
+*.Library/bld/
+*.Library/[Oo]bj/
+*.Library/[Ll]og/
+*.Library/[Ll]ogs/
+*.Library/bin/
+*.Tests/[Dd]ebug/
+*.Tests/[Dd]ebugPublic/
+*.Tests/[Rr]elease/
+*.Tests/[Rr]eleases/
+*.Tests/x64/
+*.Tests/x86/
+*.Tests/[Ww][Ii][Nn]32/
+*.Tests/[Aa][Rr][Mm]/
+*.Tests/[Aa][Rr][Mm]64/
+*.Tests/bld/
+*.Tests/[Oo]bj/
+*.Tests/[Ll]og/
+*.Tests/[Ll]ogs/
+*.Tests/bin/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -786,8 +829,10 @@ Secrets.json
 .setup_done
 
 # Azure B2C
-/**/src/custom-policies/B2C_1A_*_*_SIGNINSIGNOUT_*.xml
-/custom-policies/**/B2C_1A_*_*_SIGNINSIGNOUT_*.xml
+**/B2C_1A_*SIGNINSIGNOUT*.xml
+**/B2C_1A_*IMPERSONATION*.xml
+dist/index.html
+.parcel-cache/
 
 # Azure Functions
 *.Functions/Properties/ServiceDependencies/*/*.json
@@ -800,3 +845,6 @@ terraform/*.tfstate*
 terraform/*.tfplan
 terraform/variables.tf
 terraform/*.key
+
+# Ansible
+vault.yml

@@ -4,15 +4,19 @@ GitHub action to install Node dependencies and cache the result
 
 ## Getting Started
 
+To get started, clone the repository using the following command:
+
 ```bash
 git clone https://github.com/Andrews-McMeel-Universal/cache-next-build
 ```
 
 ## Installation
 
-To make `cache-next-build` a part of your workflow, just add a step to one of your workflows in your `.github/workflows/` directory in your GitHub repository.
+To integrate `cache-next-build` into your workflow, just add a step to one of your workflows in your `.github/workflows/` directory in your GitHub repository.
 
-## Options
+## Configuration Options
+
+You can customize the behavior of `action-template` using the following variables:
 
 | Variable | Description | Required | `[Default]` |
 | -------- | ----------- | :------: | ----------- |
